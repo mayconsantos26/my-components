@@ -69,12 +69,12 @@ header ul li:first-child a:hover {
 }
 
 header ul li a img {
-    width: 40%;
+    width: 50%;
 }
 
 /* Conteúdo */
 Main {
-    padding: 30px;
+    padding: 50px 30px;
 }
 
 /* Rodapé */
@@ -87,6 +87,22 @@ footer {
     bottom: 0;
     width: 100%;
     opacity: 0.9;
+}
+
+footer p {
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+}
+
+/* Padrão */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 20px 0;
+    color: #ff7833;
+}
+
+h1 {
+    font-size: 2em;
 }
 
 /* Responsividade */
