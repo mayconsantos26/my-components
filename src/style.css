@@ -229,8 +229,10 @@ nav > ul li img {
 }
 
 /* Listas */
-
-
+.list {
+    display: flex;
+    justify-content: space-between;
+}
 
 /* ==================== */
 /* Padrão */
