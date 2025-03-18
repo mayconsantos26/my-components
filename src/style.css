@@ -135,8 +135,8 @@ nav > ul li img {
 }
 
 /* Tipografia */
-.tipografia_content ul li {
-    margin-bottom: 10px !important;
+.tipografia-list {
+    list-style-type: none;
 }
 
 .font-family {
