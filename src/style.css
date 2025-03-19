@@ -242,8 +242,16 @@ nav > ul li img {
     gap: 20px;
 }
 
-.form-text {
+.form-text a {
     font-size: 12px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.form-text a:hover {
+    opacity: 1;
+    color: var(--primary-color);
+    font-weight: bold;
 }
 
 input,
@@ -333,7 +341,6 @@ p {
     }
 
     header {
-        width: 100%;
         height: auto;
         padding: 10px;
         text-align: center;
@@ -380,5 +387,21 @@ p {
 
     .form-container {
         gap: 10px; /* Menor espaço entre os itens do formulário */
+    }
+}
+
+@media (max-width: 319px) {
+    /* Ajuste para telas muito pequenas, como celulares mais antigos */
+    body {
+        font-size: 12px; /* Reduz o tamanho da fonte */
+    }
+
+    main {
+        margin: 5px;
+    }
+    
+    header {
+        width: 100%;
+        padding: 7px;
     }
 }
