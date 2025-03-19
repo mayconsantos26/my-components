@@ -45,12 +45,39 @@
 
     <main>
         <section>
-            <h1>My Components -</h1>
-            <article>
+            
+            <div class="form-content">
+                <h1>
+                    My components - 
+                </h1>
                 <h2>Formulário</h2>
-                
-
-            </article>
+                <h3>Entre em contato conosco:</h3>
+        
+                <div class="form-container">
+                    <form action="#" method="post">
+                        <div class="form-container">
+                            <div>
+                                <label for="nome">Nome</label>
+                                <input type="text" placeholder="Nome completo" id="nome" required>
+                            </div>
+                            <div>
+                                <label for="email">Email</label>
+                                <input type="email" placeholder="exemplo@exemplo.com" id="email" required>
+                            </div>
+                        </div>
+                        <label for="text">Digite sua mensagem:</label>
+                        <textarea name="text" id="text" required></textarea>
+                        <button type="submit" class="btn-form">
+                            Enviar
+                        </button>
+                    </form>
+                    <div class="form-text">
+                        <p><i>Endereço: R. Amadeu - São Bernardo do Campo, SP, 09852-410</i></p>
+                        <p><i><a href="mailto:">my_component@component.com.br</a></i></p>
+                        <p><i>Telefone: (11) 99999-9999</i></p>
+                    </div>
+                </div>
+            </div>
 
         </section>
     </main>

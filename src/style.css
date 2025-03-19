@@ -234,6 +234,48 @@ nav > ul li img {
     justify-content: space-between;
 }
 
+/* Formulário */
+.form-container {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    gap: 20px;
+}
+
+.form-text {
+    font-size: 12px;
+}
+
+input,
+textarea,
+select
+{
+    display: inline-block;
+    padding: 8px;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    background-color: var(--tertiary-color);
+    color: #ffffff;
+}
+
+.btn-form {
+    padding: 10px;
+    background: var(--secondary-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.btn-form:hover {
+    background: var(--primary-color);
+}
+
 /* ==================== */
 /* Padrão */
 h1, h2, h3, h4, h5, h6 {
@@ -251,10 +293,92 @@ strong {
     color: var(--primary-color);
 }
 
-/* ul {
-    list-style-type: none;
-} */
-
 ul li {
     margin-bottom: 10px;
+}
+
+p {
+    margin-top: 0;
+}
+
+/* ==================== */
+/* Responsividade */
+@media (max-width: 1023px) {
+    /* Ajuste para telas de tablet */
+    main {
+        margin: 30px;
+        width: calc(100% - 120px); /* Ajusta a largura para telas menores */
+    }
+
+    header {
+        width: 120px; /* Reduz a largura do menu lateral */
+    }
+
+    .card-item:nth-child(1) .card,
+    .card-item:nth-child(2) .card,
+    .card-item:nth-child(3) .card {
+        flex: 1 1 48%; /* Faz com que os cards fiquem com largura de 48% */
+    }
+
+    .form-container {
+        flex-direction: column; /* Coloca os itens do formulário em coluna */
+    }
+}
+
+@media (max-width: 767px) {
+    /* Ajuste para telas de celular */
+    main {
+        margin: 15px;
+        width: 100%; /* Preenche a tela inteira */
+    }
+
+    header {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav > ul li {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .card-item {
+        flex: 1 1 100%; /* Faz com que os cards ocupem 100% da largura */
+    }
+
+    .redes-sociais {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 479px) {
+    /* Ajuste para telas muito pequenas, como celulares */
+    body {
+        font-size: 14px; /* Reduz o tamanho da fonte */
+    }
+
+    header {
+        width: 100%;
+        padding: 10px;
+    }
+
+    nav > ul li {
+        padding: 8px;
+        text-align: center;
+    }
+
+    .card-item {
+        flex: 1 1 100%; /* Cards ocupando 100% */
+    }
+
+    .form-container {
+        gap: 10px; /* Menor espaço entre os itens do formulário */
+    }
 }
