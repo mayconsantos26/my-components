@@ -235,11 +235,21 @@ nav > ul li img {
 }
 
 /* Formulário */
+form {
+    width: 100%;
+    max-width: 480px;
+}
+
 .form-container {
     display: flex;
     align-items: flex-start;
+    margin-bottom: 20px;
     width: 100%;
     gap: 20px;
+}
+
+.form-container:first-child {
+    margin: 0;
 }
 
 .form-text a {
@@ -267,6 +277,21 @@ select
     margin-bottom: 15px;
     background-color: var(--tertiary-color);
     color: #ffffff;
+    resize: vertical;
+}
+
+.form-radio {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.form-radio label {
+    width: 100%;
+}
+
+.form-radio input {
+    margin: 0;
 }
 
 .btn-form {
