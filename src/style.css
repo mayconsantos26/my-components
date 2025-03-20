@@ -83,21 +83,14 @@ nav ul li:first-of-type:hover {
 nav > ul li a {
     text-decoration: none;
     color: #ffffff;
-    padding: 15px 0;
+    padding: 15px;
 }
 
 nav > ul li img {
     width: 80px;
 }
 
-/* ==================== */
-/* Conteúdo Principal */
-.content {
-    padding-left: 25px;
-    border-left: var(--primary-color) 3px solid;
-    margin: 25px 0;
-}
-
+/* ========== Pages ========== */
 /* Home */
 .redes-sociais {
     display: flex;
@@ -232,6 +225,7 @@ nav > ul li img {
 .list {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 /* Formulário */
@@ -242,14 +236,15 @@ form {
 
 .form-container {
     display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;
-    width: 100%;
     gap: 20px;
 }
 
 .form-container:first-child {
     margin: 0;
+}
+
+.form-content {
+    margin-bottom: 15px;
 }
 
 .form-text a {
@@ -262,22 +257,6 @@ form {
     opacity: 1;
     color: var(--primary-color);
     font-weight: bold;
-}
-
-input,
-textarea,
-select
-{
-    display: inline-block;
-    padding: 8px;
-    width: 100%;
-    border: none;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-bottom: 15px;
-    background-color: var(--tertiary-color);
-    color: #ffffff;
-    resize: vertical;
 }
 
 .form-radio {
@@ -294,23 +273,91 @@ select
     margin: 0;
 }
 
-.btn-form {
-    padding: 10px;
-    background: var(--secondary-color);
+.form-checkbox {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--primary-color);
+}
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+input,
+textarea,
+select
+{
+    display: inline-block;
+    padding: 8px;
+    width: 100%;
     border: none;
     border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--tertiary-color);
     color: #ffffff;
-    font-weight: bold;
+    margin: 0;
+    resize: vertical;
 }
 
-.btn-form:hover {
-    background: var(--primary-color);
+#enviarBtn {
+    background-color: var(--primary-color);
 }
 
-/* ==================== */
-/* Padrão */
+#enviarBtn:disabled {
+    background-color: #f4f4f4;
+    cursor: not-allowed;
+    color: var(--tertiary-color);
+}
+
+/* Botões */
+.button-container {
+    width: 100%;
+}
+
+.button-container h4 {
+    margin: 0;
+}
+
+/* ========== Default ========== */
+
+/* Estrutura */
+.container {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    width: 100%;
+    gap: 20px;
+}
+
+/* Conteúdo Principal */
+.content {
+    padding-left: 25px;
+    border-left: var(--primary-color) 3px solid;
+    margin: 25px 0;
+}
+
+/* Fontes */
 h1, h2, h3, h4, h5, h6 {
     margin: 0 0 20px 0;
     color: var(--primary-color);
@@ -322,10 +369,6 @@ h1 {
     font-size: 2em;
 }
 
-strong {
-    color: var(--primary-color);
-}
-
 ul li {
     margin-bottom: 10px;
 }
@@ -334,8 +377,46 @@ p {
     margin-top: 0;
 }
 
-/* ==================== */
-/* Responsividade */
+strong {
+    color: var(--primary-color);
+}
+
+/* Botões */
+.btn {
+    padding: 10px;
+    background: var(--secondary-color);
+    border: none;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    width: 100%;
+    color: #ffffff;
+    font-weight: bold;
+    border: 2px solid transparent;
+}
+
+.btn:hover {
+    background: var(--primary-color);
+}
+
+.btn-short {
+    width: 30%;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--tertiary-color);
+}
+
+.btn-outline:hover {
+    color: var(--primary-color);
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    
+}
+
+/* ========== Responsividade ========== */
+
+/* 1028px */
 @media (max-width: 1023px) {
     /* Ajuste para telas de tablet */
     main {
@@ -356,8 +437,15 @@ p {
     .form-container {
         flex-direction: column; /* Coloca os itens do formulário em coluna */
     }
+
+    .list {
+        display: flex;
+        justify-content: flex-start;
+        gap: 50px;
+    }
 }
 
+/* 768px */
 @media (max-width: 767px) {
     /* Ajuste para telas de celular */
     main {
@@ -366,7 +454,6 @@ p {
     }
 
     header {
-        height: auto;
         padding: 10px;
         text-align: center;
     }
@@ -380,53 +467,37 @@ p {
         flex: 1 1 100%; /* Faz com que os cards ocupem 100% da largura */
     }
 
-    .redes-sociais {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .form-container {
         flex-direction: column;
     }
+
+    .container {
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        font-size: 11px;
+        padding: 8px;
+    }
 }
 
+/* 480px */
 @media (max-width: 479px) {
     /* Ajuste para telas muito pequenas, como celulares */
     body {
         font-size: 14px; /* Reduz o tamanho da fonte */
     }
 
-    header {
-        width: 100%;
-        padding: 10px;
-    }
-
     nav > ul li {
         padding: 8px;
         text-align: center;
     }
-
+    
     .card-item {
         flex: 1 1 100%; /* Cards ocupando 100% */
     }
 
     .form-container {
         gap: 10px; /* Menor espaço entre os itens do formulário */
-    }
-}
-
-@media (max-width: 319px) {
-    /* Ajuste para telas muito pequenas, como celulares mais antigos */
-    body {
-        font-size: 12px; /* Reduz o tamanho da fonte */
-    }
-
-    main {
-        margin: 5px;
-    }
-    
-    header {
-        width: 100%;
-        padding: 7px;
     }
 }

@@ -50,24 +50,28 @@
                 <h1>
                     My components - 
                 </h1>
-                <h2>Formulário</h2>
-                <h3>Entre em contato conosco:</h3>
+                <div class="content">
+                    <h2>Formulário</h2>
+                    <h3>Entre em contato conosco:</h3>
+                </div>
         
                 <div class="form-container">
                     <form action="#" method="#">
                         <div class="form-container">
-                            <div>
+                            <div class="form-content">
                                 <label for="nome">Nome</label>
                                 <input type="text" placeholder="Nome completo" id="nome" required>
                             </div>
-                            <div>
+                            <div class="form-content">
                                 <label for="email">Email</label>
                                 <input type="email" placeholder="exemplo@exemplo.com" id="email" required>
                             </div>
                         </div>
-                        <label for="text">Digite sua mensagem:</label>
-                        <textarea name="text" id="text" required></textarea>
-                        <button type="submit" class="btn-form">
+                        <div class="form-content">
+                            <label for="text">Digite sua mensagem:</label>
+                            <textarea name="text" id="text" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">
                             Enviar
                         </button>
                     </form>
@@ -87,33 +91,47 @@
                 <p>
                     Qual sua linguagem preferida?
                 </p>
-                <div class="form-container">
+                <div class="container">
                     <form action="#" method="#">
-                        <select name="text" id="quiz">
-                            <option value="" readonly>Selecione</option>
-                            <option value="">Phyton</option>
-                            <option value="">JS</option>
-                            <option value="">Java</option>
-                            <option value="">TypeScript</option>
-                            <option value="">Go</option>
-                        </select>
-                        <div class="form-radio">
-                            <label for="">
+
+                        <!-- Seleção -->
+                        <div class="form-content">
+                            <select name="text" id="quiz">
+                                <option value="" readonly>Selecione</option>
+                                <option value="">Phyton</option>
+                                <option value="">JS</option>
+                                <option value="">Java</option>
+                                <option value="">TypeScript</option>
+                                <option value="">Go</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group form-content">
+                            <!-- Radio Buttons -->
+                            <label class="form-option">
+                                <input type="radio" name="prioridade" value="baixa" required>
                                 Baixa Prioridade
                             </label>
-                            <input type="radio" name="" id="">
-                        </div>
-                        <div class="form-radio">
-                            <label for="">
+                            <label class="form-option">
+                                <input type="radio" name="prioridade" value="media" required>
                                 Média Prioridade
                             </label>
-                            <input type="radio" name="" id="">
-                        </div>
-                        <div class="form-radio">
-                            <label for="">
+                            <label class="form-option">
+                                <input type="radio" name="prioridade" value="alta" required>
                                 Alta Prioridade
                             </label>
-                            <input type="radio" name="" id="">
+                        
+                            <!-- Checkbox -->
+                            <label class="form-option">
+                                <input type="checkbox" name="copia" id="copia">
+                                Envie-me uma cópia
+                            </label>
+                        </div>                        
+
+                        <!-- Botões -->
+                        <div class="form-buttons">
+                            <button type="reset" id="limparBtn" class="btn">Limpar</button>
+                            <button type="submit" id="enviarBtn" class="btn btn-outline" disabled>Enviar</button>
                         </div>
                     </form>
                 </div>
