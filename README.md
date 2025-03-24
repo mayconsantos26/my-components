@@ -1,4 +1,4 @@
-# SANTOSCASH - My Components.
+# My Components.
 
 ## Layout e Interface
 
@@ -17,11 +17,11 @@ A interface foi desenvolvida com um **design moderno e responsivo**, garantindo 
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-repositorio/santoscash-frontend.git
+   git clone https://github.com/mayconsantos26/my-components.git
    ```
 2. Acesse o diretório do projeto:
    ```bash
-   cd santoscash-frontend
+   cd my-components
    ```
 3. Abra o arquivo `index.html` em um navegador web.
 
