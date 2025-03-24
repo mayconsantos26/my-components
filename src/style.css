@@ -72,7 +72,6 @@ nav > ul li:first-of-type {
 
 nav > ul li:hover {
     background-color: var(--primary-color);
-    opacity: 0.7;
 }
 
 nav ul li:first-of-type:hover {
@@ -104,6 +103,10 @@ nav > ul li img {
     align-items: center;
     margin-right: 20px;
     gap: 8px;
+}
+
+.item_redes-sociais:last-of-type {
+    margin-right: 0;
 }
 
 .item_redes-sociais a {
@@ -339,6 +342,41 @@ select
     margin: 0;
 }
 
+/* Tabelas */
+
+.table-container {
+    display: block;
+    width: 100%;
+    overflow-x: auto;}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    padding: 0 20px;
+}
+
+tbody tr:hover {
+    background-color: var(--primary-color); /* Cor ao passar o mouse */
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+th {
+    text-align: left;
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+
+th, td {
+    border-bottom: 2px solid var(--secondary-color);
+    padding: 10px;
+}
+
+th:last-child, 
+td:last-child {
+    text-align: right;
+}
+
 /* ========== Default ========== */
 
 /* Estrutura */
@@ -425,7 +463,7 @@ strong {
     }
 
     header {
-        width: 120px; /* Reduz a largura do menu lateral */
+        max-width: 120px; /* Reduz a largura do menu lateral */
     }
 
     .card-item:nth-child(1) .card,
@@ -463,22 +501,51 @@ strong {
         text-align: center;
     }
 
+    nav > ul li a {
+        padding: 0;
+    }
+    
+    .card-content {
+        display: none;
+    }
+    
     .card-item {
         flex: 1 1 100%; /* Faz com que os cards ocupem 100% da largura */
     }
-
+    
     .form-container {
         flex-direction: column;
     }
-
+    
     .container {
         flex-wrap: wrap;
     }
-
+    
+    .content {
+        padding-left: 5px;
+    }
+    
     .btn {
         font-size: 11px;
         padding: 8px;
     }
+
+    p {
+        font-size: 12px;
+    }
+    
+    h2, h3, h4, h5, h6 {
+        font-size: 15px;
+    }
+    
+    h1 {
+        font-size: 20px;
+    }
+
+    .table-container {
+        display: none;
+    }
+    
 }
 
 /* 480px */
@@ -496,8 +563,10 @@ strong {
     .card-item {
         flex: 1 1 100%; /* Cards ocupando 100% */
     }
-
+    
     .form-container {
         gap: 10px; /* Menor espaço entre os itens do formulário */
     }
+
+    
 }
